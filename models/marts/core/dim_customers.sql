@@ -1,6 +1,7 @@
+
 with customers as (
 
-    select * from {{ ref('stg_customers') }}
+    select * from {{ ref('stg_customers')}}
 
 ),
 
@@ -21,9 +22,11 @@ customer_orders as (
 
     from orders
 
+    -- group by column 1 
     group by 1
 
 ),
+
 
 final as (
 
